@@ -1,0 +1,241 @@
+#nav {
+    display: flex;
+    align-items: center;
+    padding: 2px 8%;
+    background-color: #101820;
+}
+
+#nav h2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: white;
+    font-family: "Caveat Brush", cursive;
+    font-size: 32px;
+}
+
+#logo {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+#nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+#nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #f5b942;
+
+    transition: width 0.25s ease;
+}
+
+#nav a:hover::after {
+    width: 100%;
+}
+
+#nav a:hover {
+    color: #f5b942;
+}
+
+#nav a:first-of-type {
+    margin-left: auto;
+}
+
+#hero {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+#hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#heroText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: black;
+    text-align: center;
+}
+
+#heroText h1 {
+    font-family: "Caveat Brush", cursive;
+    font-size: 80px;
+    margin: 0;
+}
+
+#heroText p {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+}
+
+h1, h2, h3{
+    font-family: 'Caveat Brush', cursive;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(4, 170, 109, 0.06), transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(245, 185, 66, 0.08), transparent 25%),
+        rgb(252, 248, 242);
+}
+
+button{
+    background-color: #04AA6D;
+    color: white;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 18px;
+    padding: 6px 25px;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+
+select {
+    padding: 10px 15px;
+
+    background-color: #fffaf0;
+    color: #333;
+
+    border: 2px solid #c8bda9;
+    border-radius: 8px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+select:hover {
+    border-color: #04aa6d;
+}
+
+select:focus {
+    outline: none;
+    border-color: #04aa6d;
+    box-shadow: 0 0 0 3px rgba(4, 170, 109, 0.15);
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#RMG,
+#RCG {
+    width: min(90%, 700px);
+    margin: 30px auto;
+}
+
+#moveCard {
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    width: 90%;
+    margin: 30px auto;
+
+    background-color: #f5f1e8;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#moveCard {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#moveCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+#moveinfo p, label{
+    font-family: 'Inter', sans-serif;
+    margin: 0px 20px;
+}
+
+#movePic {
+    grid-row: 1 / 5;
+    overflow: hidden;
+}
+
+#movePic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+#moveCard:hover #movePic img {
+    transform: scale(1.05);
+}
+
+#moveCard h2, #moveCard > label, #moveCard > p, #movetype {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.moveChange {
+    animation: moveChange 0.4s ease;
+}
+
+@keyframes moveChange {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#Combo {
+    background-color: #e8faf0;
+    border: 2px solid #80af98;
+    border-radius: 12px;
+
+    padding: 15px 20px;
+    margin: 20px auto;
+
+    font-family: 'Caveat Brush', cursive;
+    font-size: 24px;
+
+    min-height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#Combo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
